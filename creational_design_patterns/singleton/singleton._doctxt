@@ -1,0 +1,11 @@
+singleton ka matlab hai k ek hi instance matlab k ek hi object banega ek class ka and instead of creating new object wo bana hua object hi circulate hoga resources mein so basically wo object pure application mein share hota hai.
+
+Question :- koi sirf ek hi instance q bana chahega usse kya fayda hai?
+Singleton pattern ka idea yeh hai ki kuch situations mein ek se zyada instances banane se problem ho sakti hai ya resources waste ho sakte hain, toh ek hi instance 
+banake usko reuse karna better option hota hai
+
+kaha kaha use hoga:
+    - jaha global control chahiye like logging, database connection
+    - resource sharing 
+    - consistency in data behaviour
+
