@@ -1,3 +1,5 @@
+<---- Hindi Explanation --->
+
 singleton ka matlab hai k ek hi instance matlab k ek hi object banega ek class ka and instead of creating new object wo bana hua object hi circulate hoga resources mein so basically wo object pure application mein share hota hai.
 
 Question :- koi sirf ek hi instance q bana chahega usse kya fayda hai?
@@ -8,4 +10,38 @@ kaha kaha use hoga:
     - jaha global control chahiye like logging, database connection
     - resource sharing 
     - consistency in data behaviour
+
+
+Hindi Explanation
+cls
+cls ek class parameter hai jo class ko represent karta hai.
+
+Jab singleton() likhkar object banaya jata hai, toh cls mein Singleton class khud pass hoti hai.
+
+__new__
+Yeh ek static method hai jo __init__ se bhi pehle call hoti hai.
+
+Yeh object creation mein interfere karke usse control karti hai, isliye yeh instance ke badle class ke sath kaam karti hai.
+
+__new__ ek special method hai jo object ka actual creation handle karta hai – yani memory allocate karta hai aur ek naya instance banata hai.
+
+super(Singleton, cls)
+Yeh super class (parent class) ko call karta hai, jo Python mein object class hoti hai.
+
+super(Singleton, cls).__new__(cls)
+Yahan parent class (i.e., object class) ke __new__ method ko call kiya jata hai aur usse cls (jo Singleton class hai) pass kiya jata hai.
+
+Isse Singleton class ka ek naya instance banaya jata hai.
+
+cls._instance
+Isme banaya hua instance store kiya jata hai.
+
+Har baar jab yeh class call hoti hai, toh check kiya jata hai ki is variable mein value hai ya nahi.
+
+Kyun super() Use Kiya?
+Agar hum directly Singleton() ya koi doosra tareeka use karte, toh infinite recursion ho jata kyunki __new__ khud ko baar-baar call karta.
+
+super() parent class ke __new__ ko call karta hai, jo base-level object creation karta hai bina recursion ke.
+
+
 
