@@ -1,6 +1,6 @@
 Strategy Design Pattern kya hai?
     1. Strategy pattern ek behavioural design pattern k andar aata hai.
-    2. ye run time pe behaviour swithc karne k kaam aat hai without changing the class structure
+    2. ye run time pe behaviour switch karne k kaam aat hai without changing the class structure
 
 Isme hum multiple algortihms define kar sakte hain and unhe interchangeably use kar sakte hain without changing the client code
 
@@ -26,4 +26,9 @@ basically client kya karta hai k wo factory method ko call karta hai and factory
     Strategy Pattern:
 
         “Mere paas object already hai — ab uska behavior plug karna hai (aur future mein kabhi bhi switch kar sakta hoon).”
+
+
+isme client context ko call karta hai and context internally apne pass rakhe strategies ko call/delegate karta hai.
+
+Client  ──▶  Context.execute(...args...)  ──▶  Strategy.do_operation(...args...)
 
