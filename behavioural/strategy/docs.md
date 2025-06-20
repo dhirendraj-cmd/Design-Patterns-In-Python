@@ -16,3 +16,14 @@ Strategy Pattern tab use hota hai jab tumhara focus “object kaunsa banega” n
 
 basically client kya karta hai k wo factory method ko call karta hai and factory method object creation k baad strategy ko call karta hai to do the implemtations
 
+
+ Simple Language Mein:
+
+    Factory Pattern:
+
+        “Mujhe ek object chahiye, lekin mujhe nahi pata kaunsa subclass banana hai — factory decide kare.”
+
+    Strategy Pattern:
+
+        “Mere paas object already hai — ab uska behavior plug karna hai (aur future mein kabhi bhi switch kar sakta hoon).”
+
